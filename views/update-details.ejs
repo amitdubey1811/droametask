@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Customer Details are given below:</p>
+    <ul class="details">
+        <!-- Loop through quotes -->
+        <% for(var i = 0; i < details.length; i++) {%>
+          <div class="quote" style="margin-top: 8%;" >
+            <!-- Output name from the iterated bookings object -->
+             <div style="margin-left: 20%;"> <h4>  <%= i+1 %>. Original Value</h4></div>
+            <div>Customer_id:<%= details[i].customer_id %>
+            </div>
+
+            <div>Fullname:<%= details[i].fullname %>
+            </div>
+            <!-- Output quote from the iterated bookings object -->
+            <div>Email:<%= details[i].email %></div>
+            
+            
+            <div>Phone:<%= details[i].phone %></div>
+             
+            <div style="margin-left: 20%;"> <h4>Edit Customer details</h4></div>
+            <form action="/update-customer" method="post">
+                
+                <input type="hidden" name="_id" value=<%= details[i]._id %> >
+                 
+                <input type="text" placeholder=<%= details[i].customer_id %> name="customer_id" value=<%= details[i].customer_id %> readonly>
+                <input type="text" placeholder=<%= details[i].fullname %> value=<%= details[i].fullname %> name="name">
+                <input type="email" placeholder=<%= details[i].email %> value=<%= details[i].email %> name="email"  >
+                <input type="tel" placeholder=<%= details[i].phone %> value=<%= details[i].phone %> name="phone"> 
+
+                <button type="submit" name="update" style="color:azure; background-color: green;">Update Details</button>
+            </form>
+          </div>
+          <br>
+        <% } %>
+      </ul>
+</body>
+</html>

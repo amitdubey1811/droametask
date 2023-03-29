@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Customers Details are given below:</p>
+    <div class="customers" style="margin-left:8%">
+        <!-- Loop through customers -->
+        <% for(var i = 0; i < details.length; i++) {%>
+          <div class="customers" style="border-radius: 1px red ;">
+            <!-- Output name from the iterated customer object -->
+            <div><%= details[i].fullname %></div>
+            <!-- Output customers from the iterated customers object -->
+            <div><%= details[i].customer_id %></div>
+            <div><%= details[i].phone %></div>
+            <div><%= details[i].email %></div>
+           
+
+          </div>
+          <form action="/delete_details" method="post">
+            <input type="hidden" value=<%= details[i]._id %> name="_id">
+            <button type="submit" style=" background-color: lightcoral;"> Delete </button>
+          </form>
+          <br>
+        <% } %>
+        </div>
+</body>
+</html>

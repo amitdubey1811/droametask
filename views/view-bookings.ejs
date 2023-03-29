@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Customers Details are given below:</p>
+    <div style="border:2px seagreen; margin: 50px;">
+    <div class="quotes" >
+        <!-- Loop through quotes -->
+        <% for(var i = 0; i < details.length; i++) {%>
+          <div class="quote" style="border-radius: 1px red ;">
+            <!-- Output name from the iterated quote object -->
+            <div> Booking_id:<%= details[i]._id%></div>
+            <div>Customer mail:<%= details[i].email %></div>
+            <!-- Output quote from the iterated quote object -->
+            <div>Booking date:<%= details[i].created_time %></div>
+            <div>Drone_shot_type:<%= details[i].drone_shot_id %></div>
+            <div>Location:<%= details[i].shotlocation_id %></div>
+            <div>Booked Date:<%= details[i].bookingdate %></div>
+             
+          </div>
+          <br>
+        <% } %>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div>
+
+        <div >
+            <form action="/details" method="post">
+
+                <div class="container py-5 h-100">
+                    <div class="row justify-content-center align-items-center h-100">
+                        <div class="col-12 col-lg-9 col-xl-7">
+                            <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                                <div class="card-body p-4 p-md-5">
+                                <div style="text-align: center;">   <h2 class="mb-4 pb-2 pb-md-0 mb-md-5">Customer Details</h2> </div> 
+
+
+
+                                    <div class="col-md-6 mb-4 pb-2">
+
+                                        <div class="form-outline">
+                                            <input type="tel" id="phoneNumber" class="form-control form-control-lg"
+                                                name="customer_id" required/>
+                                            <label class="form-label" for="phoneNumber">Customer ID</label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+
+                                            <div class="form-outline">
+                                                <input type="text" id="firstName" class="form-control form-control-lg"
+                                                    name="fullname" required/>
+                                                <label class="form-label" for="firstName">Full Name</label>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="row">
+                                    <div class="col-md-6 ">
+
+                                        <div class="form-outline">
+                                            <input type="email" id="emailAddress" class="form-control form-control-lg"
+                                                name="email" required />
+                                            <label class="form-label" for="emailAddress">Email</label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-4 pb-2">
+
+                                        <div class="form-outline">
+                                            <input type="tel" id="phoneNumber" class="form-control form-control-lg"
+                                                name="phone"  required/>
+                                            <label class="form-label" for="phoneNumber">Phone Number</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="mt-4  pt-2" style="margin-left: 87%;">
+                                    <input class="btn btn-primary btn-lg" type="submit" value="Create " />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+            <div style="display: flex; " style="margin-left:50px ;">
+                <!-- <form action="/view-details" method="get">
+
+                    <div class="mt-4  pt-2" style="margin-left: 110%;">
+                        <button class="btn btn-warning btn-lg" type="submit" value="View Customers" />
+                    </div>
+
+                </form> -->
+                <form action="/view-details" method="get" style="margin-left: 5%;">
+                    <button type="submit" class="btn btn-warning btn-lg" value="Submit"> View Customer </button>
+                </form>
+
+
+                <form action="/update-details" method="get" style="margin-left: 5%;">
+
+                   
+                    <button type="submit" class="btn btn-success btn-lg" value="Submit"> Update Customer </button>
+                </form>
+
+                <form action="/delete-details" method="get" style="margin-left: 5%;">
+
+                    <button type="submit" class="btn btn-danger btn-lg" value="Submit"> Delete Customer </button>
+                </form>
+
+            </div>
+
+
+        </div>
+
+
+        <div style="margin-top: 6%;">
+
+            <form action="/bookings" method="post">
+
+                <div class="container py-5 h-100">
+                    <div class="row justify-content-center align-items-center h-100">
+                        <div class="col-12 col-lg-9 col-xl-7">
+                            <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                                <div class="card-body p-4 p-md-5">
+                              <div style="text-align: center;">     <h2 class="mb-4 pb-2 pb-md-0 mb-md-5">Booking Details</h2> </div> 
+
+
+
+
+                                    <div class="col-md-6 ">
+
+                                        <div class="form-outline">
+                                            <input type="email" id="emailAddress" class="form-control form-control-lg"
+                                                name="email" required />
+                                            <label class="form-label" for="emailAddress"> Customer Email</label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+
+                                        <div class="form-outline">
+                                            <input type="text" id="location" class="form-control form-control-lg"
+                                                name="location" required/>
+                                            <label class="form-label" for="location">Shot Location </label>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="row">
+                                <div class="col-md-6 ">
+
+                                    <div class="form-outline">
+                                        <input type="text" id="drone" class="form-control form-control-lg"
+                                            name="drone" />
+                                        <label class="form-label" for="drone">Drone Shot Type</label>
+                                    </div>
+
+                                </div>
+
+
+
+
+                                <div class="col-md-6 ">
+
+                                    <div class="form-outline">
+                                        <input type="date" id="drone" class="form-control form-control-lg"
+                                            name="bookingdate" required/>
+                                        <label class="form-label" for="drone">Booking Date</label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="mt-4 pt-2" style="margin-left: 87%;">
+                                <input class="btn btn-primary btn-lg" type="submit" value="Book" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        </form>
+
+        <div style="display: flex;">
+            <form action="/view-bookings" method="get" style="margin-left: 5%;">
+                <button type="submit"   class="btn btn-warning btn-lg" value="Submit"> View Bookings </button>
+            </form>
+
+
+            <form action="/update-bookings" method="get" style="margin-left: 5%;">
+
+                <button type="submit"  class="btn btn-success btn-lg" value="Submit"> Edit Bookings </button>
+            </form>
+
+            <form action="/delete-bookings" method="get" style="margin-left: 5%;">
+
+                <button type="submit" class="btn btn-danger btn-lg" value="Submit"> Delete Bookings </button>
+
+            </form>
+        </div>
+
+
+    </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

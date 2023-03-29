@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Customers Details are given below:</p>
+    <div style="border:2px seagreen; margin: 50px;">
+    <div class="quotes" >
+        <!-- Loop through quotes -->
+        <% for(var i = 0; i < details.length; i++) {%>
+            <div class="quote" style="margin-top: 8% ; ">
+                <!-- Output name from the iterated quote object -->
+                <div style="margin-left: 20%;"> <h4>  <%= i+1 %>. Original Value</h4></div>
+                <div> booking_id:<%= details[i]._id%></div>
+                <div>Customer mail:<%= details[i].email %></div>
+                <!-- Output quote from the iterated quote object -->
+                <div><%= details[i].created_time %></div>
+                <div><%= details[i].drone_shot_id %></div>
+                <div><%= details[i].shotlocation_id %></div>
+                <div><%= details[i].bookingdate %></div>
+                 
+              </div>
+              <div style="margin-left: 20%;"> <h4>Edit Booking details</h4></div>
+          <form action="/update-order" method="post">
+                
+            <input type="hidden" name="_id" value=<%= details[i]._id %> >
+             <!-- <div> <%= details[i]._id %></div> -->
+           
+            <input type="text" placeholder=<%= details[i].drone_shot_id %> value=<%= details[i].drone_shot_id %> name="drone">
+            <input type="email" placeholder=<%= details[i].email %> value=<%= details[i].email %> name="email"  >
+            <input type="text" placeholder=<%= details[i].shotlocation_id %> value=<%= details[i].shotlocation_id %> name="location"> 
+            <input type="date" placeholder=<%= details[i].bookingdate %> value=<%= details[i].bookingdate %> name="date"> 
+
+
+            <button type="submit" name="update" style="color:azure; background-color: green;">Update Details</button>
+        </form>
+          <br>
+
+        <% } %>
+
+        </div>
+    </div>
+</body>
+</html>
