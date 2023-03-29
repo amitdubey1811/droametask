@@ -20,8 +20,8 @@ Star⭐ the repo if you like what you see😉.
 
 
 ## How to use
-* Download the code as zip file and the unzip 
-* Open in VS code
+* Download the code as zip file and then unzip 
+* Open the folder in VS code
 * Install the dependecies required given in package.json file
 * Now run the command "npm run dev" 
 * Now open http://localhost:8000/ on your chrome browser
